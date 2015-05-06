@@ -1,0 +1,86 @@
+@import "scss/foundation";
+
+html {
+  overflow-y: scroll;
+}
+body {
+  background: #f7f7f7;
+  color: #333332;
+}
+.well {
+  box-shadow: none;
+}
+.wrapper {
+  max-width: 95%;
+  margin: 0 auto;
+  padding-top: 34/1280*100%;
+}
+header.wrapper {
+@extend .wrapper;
+z-index: 50;
+margin: 0 3%;
+position: absolute;
+top: 0px;
+}
+.main {
+  padding: 20px 0;
+}
+h1 {
+  font-size: 65px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.1em;
+  margin-bottom: 20px;
+}
+.hero-image {
+    background: url('http://placehold.it/1280x650');
+    width: 1280px/1280px * 100%;
+    height: 95%;
+    position: relative;
+    top: 0px;
+}
+.hero-image .hero-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%)
+}
+.process-text {
+    position: inherit;
+    padding-top: 0px;
+    magrin-top: 37/3938 * 100%;
+}
+.team-at-work {
+    background-color: #ff00ea;
+    @extend .full-width
+}
+.team-at-work {
+    li {
+        list-style: none;
+    }
+    right {
+        width: 854/1280 * 100%;
+    }
+    left: {
+        width: 854/(2*1280) * 100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+.full-width {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+.team-pics {
+    .columns img {
+        width: 100%;
+        height: auto;
+    }
+    .columns {
+        position: relative;
+    }
+}

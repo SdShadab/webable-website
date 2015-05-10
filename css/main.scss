@@ -1,5 +1,9 @@
 @import "scss/foundation";
 
+@mixin padding-top($number,$page-height) {
+    padding-top: $number / $page-height + 3.5em;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -11,9 +15,21 @@ body {
   box-shadow: none;
 }
 .wrapper {
-  max-width: 95%;
+  max-width: 94%;
   margin: 0 auto;
-  padding-top: 34/1280*100%;
+}
+.wrapper {
+    .capabilities {
+        @include padding-top(59,2850);
+    }
+    .client-logos {
+        background: url(images/Layer-17.png);
+        height: 730px;
+        margin: 43/2850 + 1em 3em;
+    }
+    .clientele {
+        @include padding-top(47,2850);
+    }
 }
 header.wrapper {
 @extend .wrapper;
@@ -21,6 +37,10 @@ z-index: 50;
 margin: 0 3%;
 position: absolute;
 top: 0px;
+padding-top: 2%;
+}
+.process-text.wrapper {
+    margin: 2% auto;
 }
 .main {
   padding: 20px 0;
@@ -84,3 +104,32 @@ h1 {
         position: relative;
     }
 }
+.client {
+    background-color: #6f316a;
+    height: 320px;
+}
+.grey {
+    background-color: lightgrey;
+    padding-top: 24/2850 * 100%;
+    padding-bottom: 20/2850 * 100%;
+    color: #9d9daa;
+}
+.grey h4 {
+    color: #9d9daa;
+}
+.six-capabilities {
+    .capability-boxes {
+        border: 5px #67686a;
+        height: auto;
+               
+    }
+    .capabilities-text {
+        padding: 138/320 * 100% / 2 + 2% 122/426 * 100% / 2 + 2%;
+        margin-bottom: 11 / 2850 * 100%;
+    }
+    .capabilities-text p {
+        margin-bottom: 0 !important;
+    }
+}
+
+        

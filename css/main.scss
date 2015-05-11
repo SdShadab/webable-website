@@ -1,7 +1,10 @@
 @import "scss/foundation";
 
-@mixin padding-top($number,$page-height) {
+$namespace: true;
+
+@mixin padding-top-bottom($number,$page-height) {
     padding-top: $number / $page-height + 3.5em;
+    padding-bottom: $number / $page-height + 2em;
 }
 
 html {
@@ -20,7 +23,7 @@ body {
 }
 .wrapper {
     .capabilities {
-        @include padding-top(59,2850);
+        @include padding-top-bottom(59,2850);
     }
     .client-logos {
         background: url(images/Layer-17.png);
@@ -28,7 +31,16 @@ body {
         margin: 43/2850 + 1em 3em;
     }
     .clientele {
-        @include padding-top(47,2850);
+        @include padding-top-bottom(47,2850);
+    }
+    .strategy {
+        @include padding-top-bottom(99,6102);
+    }
+    .principles {
+        @include padding-top-bottom(99,2158);
+    }
+    .meet-the-team {
+        @include padding-top-bottom(99,2158);
     }
 }
 header.wrapper {
@@ -131,5 +143,14 @@ h1 {
         margin-bottom: 0 !important;
     }
 }
-
-        
+.strategy-grid {
+    .columns img {
+    width: 100%;
+    }
+    .columns.large-8 img {
+        height: 100%;
+    }
+}
+.wrapper.capability-details .strategy h2 {
+    padding-bottom: 0.8em;
+}

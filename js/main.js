@@ -1,3 +1,1 @@
-$(function () {
-  console.log("ready to go!");
-})
+$(document).foundation();
